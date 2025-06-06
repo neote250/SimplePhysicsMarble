@@ -6,19 +6,20 @@ extends Node2D
 @onready var marble = $MazeContainer/Marble
 @onready var goal = $MazeContainer/Goal
 @onready var ui = $UI
+@onready var timeLabel = $UI/Panel/Label
 
-var tilt_strength = 1200.0  # Increased for more responsive feel
-var tilt_speed = 120.0  # Slightly faster rotation
+var tilt_strength = 1200.0  #decrease for more physics-y
+var tilt_speed = 120.0
 var current_tilt = Vector2.ZERO
 var level_complete = false
+var trackedTime = 0
+var fullNumberTracker = 0
 
 func _ready():
 	# Connect goal signal
 	goal.body_entered.connect(_on_goal_reached)
 	
-	# Set up UI
-	ui.get_node("RestartButton").pressed.connect(_restart_level)
-	ui.get_node("Label").text = "Use WASD or Arrow Keys to tilt the maze!"
+	$UI/Panel2/Label.text = "Best: {0}".format([ScoreManager.highScore])
 	
 	# Center the maze rotation around screen center
 	var viewport_size = get_viewport().get_visible_rect().size
@@ -26,8 +27,15 @@ func _ready():
 
 func _process(delta):
 	if level_complete:
+		_restart_level()
 		return
+	if(fullNumberTracker < 1):
+		fullNumberTracker += get_process_delta_time()
+	else:
+		fullNumberTracker -= 1
+		trackedTime+=1
 		
+	timeLabel.text = "Time: {0}".format([trackedTime])
 	# Handle input for tilting the maze with slight smoothing
 	var input_vector = Vector2.ZERO
 	var input_strength = 1.0
@@ -37,10 +45,7 @@ func _process(delta):
 		input_vector.x -= input_strength
 	if Input.is_action_pressed("move_right"):
 		input_vector.x += input_strength
-	if Input.is_action_pressed("move_up"):
-		input_vector.y -= input_strength
-	if Input.is_action_pressed("move_down"):
-		input_vector.y += input_strength
+
 	
 	# Apply tilt with slight acceleration feel
 	var tilt_acceleration = tilt_speed
@@ -50,21 +55,35 @@ func _process(delta):
 	# Rotate the entire maze around its center (except UI)
 	$MazeContainer.rotation_degrees = current_tilt.x
 	
-	# Apply gravity directly - no rotation needed since marble rotates with container
+	# Apply gravity directly
 	var gravity_force = Vector2(0, tilt_strength)
 	marble.apply_central_force(gravity_force)
 
 func _on_goal_reached(body):
 	if body == marble:
 		level_complete = true
-		ui.get_node("Label").text = "Level Complete! Press Restart to play again."
-		print("Goal reached!")
+		if(trackedTime < ScoreManager.highScore):
+			ScoreManager.highScore = trackedTime
+
 
 func _restart_level():
-	level_complete = false
-	current_tilt = Vector2.ZERO
-	$MazeContainer.rotation_degrees = 0
-	marble.position = $MazeContainer/StartPosition.position
-	marble.linear_velocity = Vector2.ZERO
-	marble.angular_velocity = 0
-	ui.get_node("Label").text = "Use WASD or Arrow Keys to tilt the maze!"
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+
+func _on_hole_body_entered(body: Node2D) -> void:	
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+func _on_hole_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+func _on_hole_3_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+func _on_hole_4_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+func _on_hole_5_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+
+func _on_hole_6_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
