@@ -67,23 +67,23 @@ func _on_goal_reached(body):
 
 
 func _restart_level():
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 
 func _on_hole_body_entered(body: Node2D) -> void:	
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 func _on_hole_2_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 func _on_hole_3_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 func _on_hole_4_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 func _on_hole_5_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")
 
 func _on_hole_6_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://MarbleMaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/MarbleMaze.tscn")

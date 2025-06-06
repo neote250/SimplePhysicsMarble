@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccj2dfp0pry0n"
-path="res://.godot/imported/vintageMarbleMazeGame.jpg-870ae21c9788507f72197a857c4ab784.ctex"
+uid="uid://b42sf5pogshr8"
+path="res://.godot/imported/woodTexture.png-10e875689b6be78217fe87cc448fa35c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vintageMarbleMazeGame.jpg"
-dest_files=["res://.godot/imported/vintageMarbleMazeGame.jpg-870ae21c9788507f72197a857c4ab784.ctex"]
+source_file="res://Assets/woodTexture.png"
+dest_files=["res://.godot/imported/woodTexture.png-10e875689b6be78217fe87cc448fa35c.ctex"]
 
 [params]
 

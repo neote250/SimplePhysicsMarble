@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3wvmmpvvj4pc"
-path="res://.godot/imported/165-1659079_hole-sprite-circle-667234195.jpg-098490cd79ddcfb1d030533aa70354b9.ctex"
+uid="uid://bgt23pef6i6jo"
+path="res://.godot/imported/clipart982.png-57290451e1ca1332832a86d5e22aecd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://165-1659079_hole-sprite-circle-667234195.jpg"
-dest_files=["res://.godot/imported/165-1659079_hole-sprite-circle-667234195.jpg-098490cd79ddcfb1d030533aa70354b9.ctex"]
+source_file="res://Assets/clipart982.png"
+dest_files=["res://.godot/imported/clipart982.png-57290451e1ca1332832a86d5e22aecd6.ctex"]
 
 [params]
 

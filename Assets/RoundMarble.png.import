@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c37sf0halxhci"
-path="res://.godot/imported/clipart1659079.png-beffc7434f31d6628401c9e11fd2e9a1.ctex"
+uid="uid://bmywijg7mupd7"
+path="res://.godot/imported/RoundMarble.png-62f9756de3c586f5f60eebaf78eac1d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://clipart1659079.png"
-dest_files=["res://.godot/imported/clipart1659079.png-beffc7434f31d6628401c9e11fd2e9a1.ctex"]
+source_file="res://Assets/RoundMarble.png"
+dest_files=["res://.godot/imported/RoundMarble.png-62f9756de3c586f5f60eebaf78eac1d7.ctex"]
 
 [params]
 
